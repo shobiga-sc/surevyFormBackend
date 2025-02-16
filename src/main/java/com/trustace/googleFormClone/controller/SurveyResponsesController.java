@@ -75,7 +75,7 @@ public class SurveyResponsesController {
     }
 
     @DeleteMapping("/delete/{surveyId}")
-    public ResponseEntity<?> deleteResponseBySurveyId(String surveyId){
+    public ResponseEntity<?> deleteResponseBySurveyId(@PathVariable String surveyId){
         try{
         surveyResponsesService.deleteResponseBySurveyId(surveyId);
         Map<String, String> response = new HashMap<>();
